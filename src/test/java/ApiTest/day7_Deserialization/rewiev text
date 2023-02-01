@@ -1,0 +1,33 @@
+contains method
+    spesifik olarak key eğeri konrtol etmediği için tavsiye edilmez
+        yanlış değeri test edebilir
+    Json response , asString() method kullanılarak comntains ile assert edilir
+
+
+path() method
+    path() method ile Json body den value alınır ve TsetNG ile Assert edilir
+
+        String name=response.path("name[0]");
+        Assert.assertEquals(name,"Thomas Eduson");
+
+    gpath syntex kullanılabilir
+
+        int lastID=response.path("id[-1]");
+        Assert.assertEquals(lastID,102);
+
+JsonPath()
+    Response da önce  Jsonpath e dönüştürülür, sonra getter methodu ile value alınır
+    TestNG/JUnit ile asseert adilir
+
+
+Hamcrest Matchers
+
+POJO
+    Plain Old Java Object
+    {
+    "userName": "Beytullah",
+    "city" :"Ankara",
+    "country":"Turkiye"
+    }
+
+Deserielization to collection

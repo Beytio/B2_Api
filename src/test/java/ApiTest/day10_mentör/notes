@@ -1,0 +1,18 @@
+API
+
+Request
+Response
+    1. status code
+    2. response Body
+    3. Response Header
+
+    How to check response body?
+    1. response.asString() (not recommended)
+    2. response.path("ABC")
+    3.JsonPath jsonpath=response.jsonPath();
+        jsonpath.getString("gpath_syntex")
+
+    NOTES: GPATH SYNTAX + java COLLECTION
+
+
+
